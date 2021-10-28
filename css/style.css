@@ -1,0 +1,29 @@
+#quadrado{
+    width: 350px;
+    position: static;
+    border: 10px solid rgb(25, 0, 255);
+    border-radius: 10px;
+    height: 10px;
+    padding-bottom: 30%;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+body {
+    background-image: url("../imagens/1.jpg");
+    background-position: 50%;
+    background-repeat: initial;
+    height: auto;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.logo {
+    content:url("../imagens/logoete2.png");
+    background-position: 50%;
+    height: auto;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+ }
+ 
