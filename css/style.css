@@ -1,29 +1,92 @@
 #quadrado{
-    width: 350px;
-    position: static;
-    border: 10px solid rgb(25, 0, 255);
-    border-radius: 10px;
-    height: 10px;
-    padding-bottom: 30%;
-    background-color: white;
-    margin-left: auto;
-    margin-right: auto;
+  width: 350px;
+  position: static;
+  border: 10px solid rgb(25, 0, 255);
+	border-radius: 10px 20px 30px 40px;
+  height: 10px;
+  padding-bottom: 30%;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
 }
 body {
-    background-image: url("../imagens/1.jpg");
-    background-position: 50%;
-    background-repeat: initial;
-    height: auto;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
+  background-image: url("../imagens/1.jpg");
+  background-position: 50%;
+  background-repeat: initial;
+  height: auto;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 div.logo {
-    content:url("../imagens/logoete2.png");
-    background-position: 50%;
-    height: auto;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
- }
- 
+  content:url("../imagens/logoete2.png");
+  background-position: 50%;
+  height: auto;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+div.creditos {
+  background-color: white;
+  width: 10%;
+  height: 10%;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 5%;
+  margin-left: 80%;
+}
+/* popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* o popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+  
+/* flecha */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(255, 255, 255) transparent transparent transparent;
+}
+  
+/* esconde e mostra o popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+  
+/* anima o popup */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+  
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+label {
+  cursor: default;
+}
