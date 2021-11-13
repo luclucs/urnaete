@@ -1,22 +1,25 @@
-#quadrado{
-  width: 350px;
-  position: static;
-  border: 10px solid rgb(25, 0, 255);
-	border-radius: 10px 20px 30px 40px;
-  height: 10px;
-  padding-bottom: 30%;
-  background-color: white;
-  margin-left: auto;
-  margin-right: auto;
+* {
+  margin: 0;
+  padding: 0;
 }
 body {
   background-image: url("../imagens/1.jpg");
-  background-position: 50%;
-  background-repeat: initial;
-  height: auto;
-  width: auto;
-  margin-left: auto;
-  margin-right: auto;
+  font-weight: bold;
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100vh;
+  text-align: center;
+}
+section {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  text-align: center;
 }
 div.logo {
   content:url("../imagens/logoete2.png");
@@ -27,13 +30,17 @@ div.logo {
   margin-right: auto;
 }
 div.creditos {
-  background-color: white;
   width: 10%;
   height: 10%;
   border-radius: 5px;
   position: relative;
   margin-top: 5%;
   margin-left: 80%;
+}
+div.opcoesform {
+  text-align: center;
+  align-content: center;
+  position: relative;
 }
 /* popup container */
 .popup {
@@ -89,4 +96,29 @@ div.creditos {
 }
 label {
   cursor: default;
+  color: #000000;
+}
+.button__votar{
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+  border: none;
+  margin: 0.5rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.4s;
+  transition: filter 0.4s;
+  transition: transform 0.4s;
+  background: #2e89ff;
+  color: #fff;
+}
+.button__votar:hover {
+  box-shadow: 0 0 10px 0 #43adc5 inset, 0 0 4px 0 #000000;
+  transform: scale(0.9);
+  cursor: pointer;
+}
+.button__votar:active {
+  transform: scale(0.6);
 }

@@ -12,7 +12,8 @@ session_start();
     <title>Eleições - Grêmio 2022</title>
 </head>
 <body>
-    <div id="quadrado">
+<section>
+    <form method="POST" action="votar.php">
         <div class="logo"></div>
         <?php
         if(isset($_SESSION['msg'])){
@@ -20,20 +21,19 @@ session_start();
             unset($_SESSION['msg']);
         }
         ?>
-        <form method="POST" action="votar.php">
-            <label>Matrícula: </label><br>
-            <input type="text" name="matricula" placeholder="Sem pontuação! Ex: 2021321" maxlength="7"><br>
-            <label>Em que partido deseja votar?</label><br>
-            <input type="checkbox" name="voto" value="1"><br>
-            <label for="chapa1">Votar na Chapa 1</label><br>
-            <input type="checkbox" name="voto" value="2"><br>
-            <label for="chapa2">Votar na Chapa 2</label><br>
-            <input type="checkbox" name="voto" value="3"><br>
-            <label for="chapa3">Votar na Chapa 3</label><br>
-            <button type="submit">Votar</button>
-        </form>
-            
-    </div>
+        <div class="opcoesform">
+            <label for="matricula">Matrícula: <abbr title="Obrigatório">*</abbr></label>
+            <input id="matricula" type="text" name="matricula" maxlength="7" placeholder="Sem pontuação! Ex: 2021321" size="21"><br><br>
+            <label for="chapa1">Votar na Chapa Um: </label>
+            <input id="chapa1" type="checkbox" name="chapa1" value="1"><br><br>
+            <label for="chapa2">Votar na Chapa Dois: </label>
+            <input id="chapa2" type="checkbox" name="chapa2" value="2"><br><br>
+            <label for="chapa3">Votar na Chapa Três: </label>
+            <input id="chapa3" type="checkbox" name="chapa3" value="3"><br>
+            <button class="button__votar" type="submit">Votar</button>
+        </div>
+    </form>
+</section>
 <footer>
     <div class="creditos">
         <div class="popup" onclick="deuClique()">Quer descobrir quem fez a arte? Clica!
