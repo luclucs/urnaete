@@ -1,60 +1,75 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 body {
-  background-image: url("../imagens/1.jpg");
-  font-weight: bold;
-  font-family: monospace;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background: url(../imagens/1.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
-  height: 100vh;
-  text-align: center;
+  background-position: 50% 70%;
+  font-family: 'Inter', sans-serif;
 }
-section {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  max-width: 700px;
-  text-align: center;
-}
-div.logo {
-  content:url("../imagens/logoete2.png");
-  background-position: 50%;
-  height: auto;
+header img{
   width: auto;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  margin: 50px auto;
 }
-div.creditos {
-  width: 10%;
-  height: 10%;
-  border-radius: 5px;
-  position: relative;
-  margin-top: 5%;
-  margin-left: 80%;
+fieldset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-div.opcoesform {
+form {
+  margin: 40px 0;
   text-align: center;
-  align-content: center;
-  position: relative;
+}
+form label, form legend {
+  display: block;
+  font-size: 20px;
+  margin: 0 0 15px;
+}
+.labelform {
+  text-shadow:2px 2px 5px #FFF;
+  font-size: 17px;
+  font-weight: 500;
+}
+#matricula {
+  border: none;
+  outline: none;
+  margin-top: 5px;
+  width: 100%;
+  height: 2em;
+  border-radius: 8px;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.copyright {
+  color: white;
+  font-size: 14px;
+  margin: 20px auto;
+}
+.copyright a:visited, a {
+  font-weight: 500;
+  color: #000000;
+  text-decoration: none;
 }
 /* popup container */
 .popup {
+  width: 300px;
+  margin-top:5%;
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   cursor: pointer;
 }
-
 /* o popup */
 .popup .popuptext {
   visibility: hidden;
   width: 160px;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+  background-color: #2e89ff;
+  color: #fff;
   text-align: center;
   border-radius: 6px;
   padding: 8px 0;
@@ -64,7 +79,6 @@ div.opcoesform {
   left: 50%;
   margin-left: -80px;
 }
-  
 /* flecha */
 .popup .popuptext::after {
   content: "";
@@ -74,31 +88,25 @@ div.opcoesform {
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: rgb(255, 255, 255) transparent transparent transparent;
+  border-color: #2e89ff transparent transparent transparent;
 }
-  
 /* esconde e mostra o popup */
 .popup .show {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s
 }
-  
 /* anima o popup */
 @-webkit-keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
 }
-  
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity:1 ;}
 }
-label {
-  cursor: default;
-  color: #000000;
-}
 .button__votar{
+  width: 15%;
   padding: 1rem;
   font-size: 1rem;
   border-radius: 1rem;
@@ -121,4 +129,21 @@ label {
 }
 .button__votar:active {
   transform: scale(0.6);
+}
+@media screen and (max-width: 320px) {
+  body{
+   background-position: 45% 60.5%;
+  }
+  header img{
+    width: auto;
+    display: flex;
+    margin: 50px 28% 100px;
+  }
+  form{
+   margin: 0 0 0 30%;
+  }
+  .button__votar{
+    margin-top: 20px;
+    width: 100%;
+  }
 }
